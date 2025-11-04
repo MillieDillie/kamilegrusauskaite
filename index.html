@@ -3,74 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kamile Grusauskaite — Personal Site</title>
-  <meta name="description" content="Writer, researcher, and postdoctoral fellow. Publications, CV, and contact." />
+  <title>Dr. Kamile Grusauskaite — Media Sociologist</title>
+  <meta name="description" content="Postdoctoral fellow. Publications, CV, and contact." />
   <style>
-    /* Early-2000s vibes: table layout, marquee, pixel-ish fonts, glowing links */
     body {
       margin: 0;
-      background: #000; /* black */
-      color: #fff;      /* white text */
-      font-family: Verdana, Geneva, Tahoma, sans-serif; /* classic web-safe */
-      line-height: 1.55;
+      background: #ffffff;
+      color: #222;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 1.6;
+      font-size: 13px;
     }
-    a { color: #39ff14; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    #wrapper { width: 960px; margin: 0 auto; }
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    #wrapper {
+      width: 960px;
+      margin: 0 auto;
+    }
     .banner {
-      border-bottom: 2px dotted #666;
-      padding: 6px 0 0;
-    }
-    .banner h1 { margin: 0; font-weight: 700; font-size: 26px; letter-spacing: 1px; }
-    .nav {
-      background: #111;
-      border-top: 2px dotted #666;
-      border-bottom: 2px dotted #666;
-      padding: 6px 8px;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      background: #ffffff;
       text-align: center;
-      font-size: 14px;
     }
-    .nav a { margin: 0 10px; }
-    .layout { display: table; width: 100%; border-spacing: 12px; }
-    .sidebar { display: table-cell; width: 220px; vertical-align: top; }
-    .content { display: table-cell; vertical-align: top; }
+    .banner h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #222;
+    }
+    .nav {
+      background: #ffffff;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 8px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+    .nav a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 13px;
+    }
+    .layout {
+      display: table;
+      width: 100%;
+      border-spacing: 12px;
+    }
+    .sidebar {
+      display: table-cell;
+      width: 300px;
+      vertical-align: top;
+    }
+    .content {
+      display: table-cell;
+      vertical-align: top;
+    }
     .card {
-      background: #0a0a0a;
-      border: 1px solid #333;
-      box-shadow: 0 0 10px #0a0a0a;
-      padding: 12px 14px;
-      margin-bottom: 16px;
+      background: #ffffff;
+      color: #222;
+      border: 1px solid #e0e0e0;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-size: 13px;
     }
-    h2 { font-size: 18px; border-bottom: 1px dotted #444; padding-bottom: 4px; }
-    h3 { font-size: 16px; margin: 12px 0 4px; }
-    .footer { text-align: center; font-size: 12px; color: #bbb; padding: 20px 0 40px; }
-    .monospace { font-family: "Courier New", Courier, monospace; }
-    .blink { animation: blink 1.2s steps(1, end) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-    .hit-counter { font-size: 12px; color: #aaa; }
-    .tag { display:inline-block; border:1px solid #444; padding:2px 6px; margin:2px 4px 0 0; font-size:12px; color:#ccc; }
-    .note { color:#ddd; font-size: 13px; }
-    .hr { height:1px; background:linear-gradient(90deg, #111, #444, #111); border:0; margin:12px 0; }
-    .marquee-box { background:#090909; border:1px solid #333; padding:4px; margin-top:6px; }
-    .old-button { display:inline-block; padding:6px 10px; border:1px solid #444; background:#101010; box-shadow: inset 0 0 6px #000; margin:3px; font-size:12px; }
-    .old-button:hover { background:#131313; }
-    ul { margin: 6px 0 6px 18px; }
-    li { margin-bottom: 4px; }
-    .contact-line { font-size: 16px; }
-    .section { scroll-margin-top: 80px; }
+    h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      color: #333;
+    }
+    h3 {
+      font-size: 15px;
+      margin: 10px 0 4px;
+      color: #333;
+    }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+      padding: 20px 0 40px;
+    }
+    .monospace {
+      font-family: "Courier New", Courier, monospace;
+    }
+    .contact-line {
+      font-size: 13px;
+    }
+    .section {
+      scroll-margin-top: 80px;
+    }
+    #bio p {
+      font-size: 12px;
+    }
+    .pub-item {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .pub-title {
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 13px;
+    }
+    .pub-title:hover {
+      text-decoration: underline;
+    }
+    .pub-abs {
+      display: none;
+      margin-top: 4px;
+      color: #444;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
   <div id="wrapper">
     <div class="banner">
-      <marquee scrollamount="3" class="monospace"></marquee>
-      <h1>Kamile Grusauskaite</h1>
-      <div class="marquee-box monospace"><marquee behavior="alternate" scrollamount="2">Writer • Researcher • Postdoctoral Fellow</marquee></div>
+      <h1>Dr. Kamile Grusauskaite</h1>
+      <div class="marquee-box monospace">Postdoctoral Fellow</div>
     </div>
 
     <div class="nav monospace">
-      <a href="#home">Home</a> | 
+      <a href="#bio">Bio</a> | 
       <a href="#publications">Publications</a> | 
+      <a href="#book-project">Book Project</a> | 
       <a href="#cv">CV</a> | 
       <a href="#contact">Contact</a>
     </div>
@@ -78,161 +142,68 @@
     <div class="layout">
       <div class="sidebar">
         <div class="card">
-          <h3>Get in touch</h3>
-          <p class="contact-line">Email (KU Leuven): <strong>kamile.grusauskaite<span class="monospace">[at]</span>kuleuven.be</strong></p>
-          <p class="contact-line">Email (Yale): <strong>kamile.grusauskaite<span class="monospace">[at]</span>yale.edu</strong></p>
-          <div class="hr"></div>
-          <div class="note">Email me for research inquiries/collaborations, talks, and media.</div>
+          <img src="portrait.jpeg" alt="Portrait Kamile Grusauskaite" width="188" height="188">
+        </div>
+        <div id="bio" class="card section">
+          <h2>Bio</h2>
+          <p>Dr. Kamile Grusauskaite is a postdoctoral fellow at the Media Culture &amp; Policy Lab at KU Leuven and a Visiting Fellow at the Department of Sociology at Yale University.</p>
+          <p>Kamile's research broadly addresses the cultural and social implications of online (social) media technologies. Using qualitative and digital ethnographic methods, she has written extensively on conspiracy theories, disinformation, and platform policies.</p>
+          <p>Her research has appeared in <em>New Media &amp; Society</em>, <em>Social Media + Society</em>, and <em>Public Understanding of Science</em>. She regularly presents her work at international conferences including ICA, EASST, AoIR, ISA, and the European Sociological Association.</p>
         </div>
         <div class="card">
-          <h3></h3>
-          <img src="portrait.png" alt="Pixel art avatar of Kamile Grusauskaite" width="150" height="150">
-        </div>
-        <div class="card">
-          <h3>About this site</h3>
-          <p class="note"></p>
-          <div class="hr"></div>
-          <div class="hit-counter monospace">Visitors (this browser): <span id="hits">0</span></div>
-          <div style="margin-top:8px;">
-            <span class="tag">ethnography</span>
-            <span class="tag">platforms</span>
-            <span class="tag">disinformation</span>
-            <span class="tag">reactionary politics</span> 
-            <span class="tag">gender & online politics</span>
-            <span class="tag">politics of platforms</span>
-            <span class="tag">conspiracy theories</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Quick Links</h3>
-          <p>
-            <a class="old-button" href="#publications">Publications</a>
-            <a class="old-button" href="#cv">Academic roles</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>Status</h3>
-          <p><span class="blink">●</span> Book Project <em>Broadcasting Together</em> coming soon.</p>
-          <img src="book-icon.png" alt="Pixel art book icon for Broadcasting Together" width="64" height="64">
+          <p><a href="Kamile_Grusauskaite_CV.pdf" target="_blank" rel="noopener"><strong>Curriculum Vitae</strong></a></p>
+          <p><a href="https://substack.com/@kamilegrusauskaite?" target="_blank" rel="noopener"><strong>Substack</strong></a></p>
+          <p><a href="https://bsky.app/profile/kamilegrusauskaite.bsky.social" target="_blank" rel="noopener"><strong>Bluesky</strong></a></p>
+          <p><a href="https://scholar.google.com/citations?user=0LfV1e8AAAAJ&hl=en" target="_blank" rel="noopener"><strong>Google Scholar</strong></a></p>
         </div>
       </div>
 
       <div class="content">
-        <div id="home" class="card section">
-          <h2>Home</h2>
-          <p>I’m a writer, researcher, and postdoctoral fellow at the Media Culture &amp; Policy Lab at KU Leuven and the Department of Sociology at Yale University.</p>
-          <p>My research centers around three interconnected areas: (1) the cultural production of conspiracy theories on mainstream and alternative platforms; (2) the governance of disinformation and how institutions, platforms, and civil society actors define and respond to it; and (3) the identity and community dynamics that shape political mobilization in digital spaces.</p>
-          <p>I use ethnography, digital observation, and in-depth interviews to understand how creators construct narratives, engage with audiences, and respond to infrastructural constraints like deplatforming and content moderation.</p>
-          <p>I’m currently writing a book based on my fieldwork in conspiracy-theory conventions, titled <em>Broadcasting Together</em>, which explores the cultural and technological dimensions of conspiracy theory production on YouTube.</p>
-          <p>My research has been published in <em>New Media &amp; Society</em>, <em>Social Media + Society</em>, and <em>Public Understanding of Science</em>, among others. I write a Substack newsletter on online culture and have appeared in media outlets like VICE Netherlands. I’ve presented my work at international conferences including ICA, AoIR, ISA, and the European Sociological Association.</p>
-        </div>
-
         <div id="publications" class="card section">
           <h2>Publications</h2>
-          <p class="note">Click a title to show/hide the abstract.</p>
-          <ul>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs1">Grusauskaite, K. (2025). <em>Broadcasting together: The biographical trajectories of YouTube conspiracy theory micro‑celebrities</em>. <em>Journal of Information Technology &amp; Politics</em>.</a>
-                <div id="abs1" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Social media platforms like YouTube are often seen as gateways for the spread of conspiracy theories. While much of the research has focused on why people consume conspiracy theory content, little attention has been given to how individuals become creators of such content. This paper addresses this gap by examining how conspiratorial online practices emerge from social and cultural contexts mediated by social media platforms and communities of practice. Drawing on 22 in-depth interviews and ethnographic fieldwork, this study explores the biographies of conspiracy YouTubers, revealing three key moments in their trajectories: the reinterpretation of pre-existing worldviews, integration into a community of practice, and the pursuit of self-promotion and branding. The findings not only contribute to understanding the life experiences that draw people to the conspiracy milieu but also underscore how online environments cultivate and sustain such conspiracy micro-celebrities.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs2">Grusauskaite, K., Harambam, J., &amp; Aupers, S. (2024). Reactionary exiles: How conspiracy theorists deal with socio‑technological exclusion. <em>Cultural Sociology</em>.</a>
-                <div id="abs2" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Due to growing public concerns regarding the consequences of disinformation and conspiracy theories, major tech companies have introduced policies to curtail them on their platforms. Until now, the academic debate has largely focused on whether these punitive policies are effective. In this study, we address the question of how de-platformed ‘conspiracy theorists’ themselves experience and deal with such socio-technological exclusion. Drawing on seminal theories in the symbolic interactionist tradition, we conceptualize conspiracy theories as stigmatized ‘knowledge’ and empirically study the ways that conspiracy theory producers manage their stigma after de-platforming. Particularly, we draw on an analysis of 22 in-depth, qualitative interviews, ethnographic observations with (former) conspiracy YouTubers and a digital ethnography. Our findings demonstrate that YouTubers respond to de-platforming by emphasizing the ‘silver linings’ of their exclusion and by accommodating, bypassing and reframing their ‘stigma’. De-platforming contributes to their legitimacy in the face of their audiences and enables them to carve out space to cultivate a new, stronger form of conspiracy capital and status. This study contributes to the literature on conspiracy theories from a cultural sociological perspective. It advances our understanding of how de-platforming may backfire, strengthening people’s beliefs and standing within their subculture.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs3">De Wildt, L., Grusauskaite, K., &amp; Aupers, S. (2024). Encoding/decoding entertainment media. <em>In Entertainment Media and Communication</em>.</a>
-                <div id="abs3" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Stuart Hall’s encoding/decoding model of cultural analysis was born as a critique of linear sender/message/receiver-models of communication, which Hall argued concentrate on message exchanges without questioning who sends and who receives a message, and the political-economic asymmetry between the two. By contrast, in encoding/ decoding analyses, the message itself—a television show or other entertainment media object—is only a pivotal object between two ‘moments’ of encoding and decoding. Encoding conceptualizes the process of how, why, and by whom a message is produced; and decoding conceptualizes how, why, and by whom the message is consumed. This chapter provides, first, an introduction to Hall and encoding/decoding as an approach to studying media entertainment; second, an overview of the theoretical challenges undergone by researchers over the last decades to operationalize and empirically apply Hall’s model; and third, an insight into the relevance to and challenges presented by 21st‑century (online, interactive, and platformized) entertainment media.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs4">Aupers, S., &amp; Grusauskaite, K. (2024). From a personality disorder to a sociological phenomenon. In <em>Dark Emotions</em>.</a>
-                <div id="abs4" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">The ‘paranoid personality’ is generally understood as an individual, psychological and pathological disorder characterized by suspicion and pervasive distrust of others. Since the early works of Sigmund Freud and Carl Gustav Jung to its professional classification in DSM since the 1950s, paranoia has been mainly considered as a pathological and psychological anxiety. This chapter broadens the perspective from the psychological micro level to the sociological macro level and ties the popularization of conspiracy theories to modernization processes and cultural change.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs5">Grusauskaite, K., Carbone, L., Harambam, J., &amp; Aupers, S. (2023). Debating (in) echo chambers: How culture shapes communication in conspiracy theory networks on YouTube. <em>New Media &amp; Society</em>.</a>
-                <div id="abs5" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">The ubiquity of social media platforms fuels heated discussions about algorithms and selection biases leading people into online “echo chambers.” Based on mixed‑methods analysis of 1,199 comments under four YouTube videos, we find that these discussions vary in their “echo‑chamberness,” which is better explained through the lens of conspiratorial (sub)cultures than through media‑effects assumptions alone.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs6">Harambam, J., Grusauskaite, K., &amp; De Wildt, L. (2023). Poly‑truth, or the limits of pluralism. <em>Public Understanding of Science</em>.</a>
-                <div id="abs6" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Qualitative content analysis of 522 comments under a Dutch newspaper article reveals four points of controversy around post‑truth: a habitus of distrust, who to involve in debate, which ways of knowing to allow, and what is at stake—highlighting tensions between technocratic and democratic ideals.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs7">Grusauskaite, K., Harambam, J., &amp; Aupers, S. (2022). Picturing opaque power. <em>Social Media + Society</em>.</a>
-                <div id="abs7" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Analyzes 24 conspiracy‑video narratives to show three modes—simulating, deciphering, and exhibiting—by which producers recontextualize mass‑media material into oppositional readings of hegemonic truths.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="abs8">Grusauskaite, K., &amp; Van Eijck, K. (2022). Turn on, tune in, drop out? A typology of psychedelic microdosing as technologies of the self. <em>Journal of Cultural Analysis and Social Change</em>.</a>
-                <div id="abs8" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">Identifies three uses of psychedelic microdosing: as a technology of self‑esteem and control at work, as self‑help, and as “slow living.”</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div id="work-in-progress" class="card section">
-          <h2>Work in Progress</h2>
-          <ul>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="wip1">Switzer, R., &amp; Grusauskaite, K. <em>Against Mainstreaming</em>.</a>
-                <div id="wip1" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">“Mainstreaming” has, since at least 2000, been the core metaphor in researchers’ attempts to comprehend the ‘rise of the far right.’ Efforts to understand the 21st century’s apparent rightward shift and purportedly increasingly normalized atmosphere of political violence are highly invested in portraying these developments as aberrations. Aberrations from an otherwise inclusionary liberal democracy; aberrations from an otherwise pluralistic public sphere; all aberrations from a mainstream. In this contribution I aim to coalesce recent critiques of the “mainstreaming” metaphor and move towards what I call a movement against mainstreaming. This article first takes stock of the emerging body of work critical of the notion of mainstreaming (Mondon and Winter 2020; Tetrault 2024). This literature review is followed by my own reflections of ethnographic fieldwork with far right activists in Sweden. Following Gillespie’s call for researchers to consider “their relationship to, and perhaps their investment in, both the objects they purport to be studying, and the very distance they posit between themselves and those objects” (2024, p. 16) this article theorizes my own encounters in the field with violence, nativism, and masculinity as empirical sites through which to critique the mainstreaming metaphor.</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="wip2">Grusauskaite, K., Marwick, A. <em> Guardians of Disinformation. How Social Media Companies Have Constructed the Category of Disinformation, 2006-2025</em></a>
-                <div id="wip2" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note"><em>coming soon</em></div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="pub-item">
-                <a href="#" class="pub-title" data-target="wip3">Grusauskaite, K. &amp; Aupers, S. <em>Stream of Paranoid Consciousness. How Free Speech Absolutism Reshapes Conspiracy Content on Alt-Tech Platforms.</em></a>
-                <div id="wip3" class="pub-abs" style="display:none; margin-top:6px;" aria-hidden="true">
-                  <div class="note">This paper examines how alt-tech platforms, particularly Rumble, reconfigure conspiracy culture. While mainstream social media platforms like YouTube and Facebook have influenced the visibility and circulation of conspiracy theories, increasing content moderation has led to the migration of creators to alternative platforms that promote unrestricted speech. Through a six-month digital ethnography of a right-wing conspiracy theory channel that transitioned from YouTube to Rumble, this study analyzes how platform affordances and ideological commitments shape conspiracy narratives. Findings reveal that Rumble fosters a distinct conspiratorial discourse characterized by (1) amateur aesthetics and (2) rhizomatic, open-ended narratives, conceptualized as a "stream of paranoid consciousness." This format, enabled by Rumble’s free speech absolutism, encourages a fluid and immersive mode of engagement that disrupts traditional narrative closure. Unlike the structured, episodic storytelling often found in mainstream media, conspiracy content on Rumble embraces ongoing uncertainty, fostering a participatory distrust loop among viewers. These aesthetic and discursive transformations echo historical right-wing media practices, particularly the interactive, unscripted style of 1990s talk radio. By demonstrating how alt-tech platforms cultivate a distinct conspiratorial culture, this paper contributes to broader discussions on platform governance, media infrastructures, and digital counter-publics. Rather than merely hosting content rejected by mainstream platforms, Rumble actively reshapes the production and reception of conspiracy theories, illustrating the profound role of platform infrastructures and values in structuring public discourse and normalizing forms of extreme speech.</div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs1"<em>"I had to open my eyes." A narrative approach to studying adult belief change.<em><strong> Political Psychology (forthcoming)</strong></em></a> <em> with Marcel van den Haak. 2025</em>
+            <div id="abs1" class="pub-abs">Why do people, socialized and sedimented in their political beliefs, change their convictions in adulthood? Belief change has a long history of research in the social sciences. Yet, in quantitative research, belief change is studied largely through cognitive and behavioral lenses, that, however valuable, struggle to capture how people themselves experience and narrate transformation and how this is made meaningful and sustained as a social process. Additionally, qualitative studies on belief change remain marginal in the field and are often confined to case-specific analyses of radical conversions. In response to this gap, this paper develops a qualitative and narrative approach to studying belief change. First, we argue that belief change is biographically situated, culturally mediated and socially embedded. Then, we draw on two contrasting case studies – on turning towards conspiracy theories and gaining anti-racist awareness through film – to find ‘master narratives’ of belief change. We offer a framework that distinguishes three recurring narrative steps, rooted in cultural repertoires: retrospective constructions of past selves, narrations of transformation, and interpretations of present selves in relation to these transformations. This theoretical and methodological framework aims to contribute to the further understanding of belief change as not only an attitudinal shift but a reworking of one’s life story.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs2"><em>Broadcasting together: The biographical trajectories of YouTube conspiracy theory micro‑celebrities.</em> <strong>Journal of Information Technology &amp; Politics.</strong></a> </em> 2025 </em>
+            <div id="abs2" class="pub-abs">Social media platforms like YouTube are often seen as gateways for the spread of conspiracy theories. While much of the research has focused on why people consume conspiracy theory content, little attention has been given to how individuals become creators of such content. This paper addresses this gap by examining how conspiratorial online practices emerge from social and cultural contexts mediated by social media platforms and communities of practice. Drawing on 22 in-depth interviews and ethnographic fieldwork, this study explores the biographies of conspiracy YouTubers, revealing three key moments in their trajectories: the reinterpretation of pre-existing worldviews, integration into a community of practice, and the pursuit of self-promotion and branding. The findings not only contribute to understanding the life experiences that draw people to the conspiracy milieu but also underscore how online environments cultivate and sustain such conspiracy micro-celebrities.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs3"><em>Reactionary exiles: How conspiracy theorists deal with socio‑technological exclusion.</em> <strong>Cultural Sociology.</strong></a> <em> with Jaron Harambam and Stef Aupers. 2024 <em>
+            <div id="abs3" class="pub-abs">Due to growing public concerns regarding the consequences of disinformation and conspiracy theories, major tech companies have introduced policies to curtail them on their platforms. Until now, the academic debate has largely focused on whether these punitive policies are effective. In this study, we address the question of how de-platformed ‘conspiracy theorists’ themselves experience and deal with such socio-technological exclusion. Drawing on seminal theories in the symbolic interactionist tradition, we conceptualize conspiracy theories as stigmatized ‘knowledge’ and empirically study the ways that conspiracy theory producers manage their stigma after de-platforming. Particularly, we draw on an analysis of 22 in-depth, qualitative interviews, ethnographic observations with (former) conspiracy YouTubers and a digital ethnography. Our findings demonstrate that YouTubers respond to de-platforming by emphasizing the ‘silver linings’ of their exclusion and by accommodating, bypassing and reframing their ‘stigma’. De-platforming contributes to their legitimacy in the face of their audiences and enables them to carve out space to cultivate a new, stronger form of conspiracy capital and status. This study contributes to the literature on conspiracy theories from a cultural sociological perspective. It advances our understanding of how de-platforming may backfire, strengthening people’s beliefs and standing within their subculture.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs4"><em>Encoding/decoding entertainment media.</em> In <strong>Entertainment Media and Communication.</strong></a><em> with Lars de Wildt and Stef Aupers. 2024</em>
+            <div id="abs4" class="pub-abs">Stuart Hall's encoding/decoding model of cultural analysis was born as a critique of linear sender/message/receiver-models of communication, which Hall argued concentrate on message exchanges without questioning who sends and who receives a message, and the political-economic asymmetry between the two. By contrast, in encoding/decoding analyses, the message itself-a television show or other entertainment media object is only a pivotal object between two ‘moments' of encoding and decoding. Encoding conceptualizes the process of how, why, and by whom a message is produced; and decoding conceptualizes how, why, and by whom the message is consumed. This chapter provides, first, an introduction to Hall and encoding/decoding as an approach to studying media entertainment; second, an overview of the theoretical challenges under-gone by researchers over the last decades to operationalize and empirically apply Hall's model; and third, an insight into the relevance to and challenges presented by 21stcentury (online, interactive, and platformized) entertainment media.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs5"><em>From a personality disorder to a sociological phenomenon.</em> In <strong>Dark Emotions.</strong></a><em> with Stef Aupers. 2024</em>
+            <div id="abs5" class="pub-abs">The ‘paranoid personality’ is generally understood as an individual, psychological and pathological disorder characterized by suspicion and pervasive distrust of others. Since the early works of Sigmund Freud and Carl Gustav Jung to its professional classification in DSM (Diagnostic and Statistical Manual of Mental Disorders) since the 1950s, paranoia has been mainly considered as a pathological and psychological anxiety. In this chapter, the perspective on paranoia is broadened from the psychological micro level to the sociological macro level. It is demonstrated how paranoia as a subjective experience and a clinical category is socially constructed in the 20th century and, more precisely, that this paranoid anxiety is intimately related to societal developments of (post)modernization. Building on classical sociological theory, the analysis shows how the emergence of a ‘distant’ nation-state (Émile Durkheim), accelerating rationalization of institutions (Max Weber), the invasion of late modern capitalism (Fredric Jameson), the proliferation of media images and ‘simulations’ (Jean Baudrillard) and technologically enhanced ‘surveillance’ and ‘biopolitics’ in everyday life (Michel Foucault) have induced a collective sense of paranoia and the popularization of conspiracy theories in Western countries.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs6"><em>Debating (in) echo chambers: How culture shapes communication in conspiracy theory networks on YouTube.</em> <strong>New Media &amp; Society.</strong></a><em> with Luca Carbone, Jaron Harambam & Stef Aupers. 2024</em>
+            <div id="abs6" class="pub-abs">The ubiquity of social media platforms fuels heated discussions about algorithms and selection biases leading people into online “echo chambers.” Scholars argue that social media deepen societal polarization and fuel political extremism. However, studies often focus on media effects, disregarding individual agency and (sub)cultural values that shape communication. As a strategic case study, this article, based on a mixed-methods analysis, including a social network and qualitative analysis of 1199 comments under four conspiracy theory comment sections on YouTube, questions how insular these spaces are? And how people in these networks communicate? We find that the discussions in our strategically sampled comments sections lie between homogeneous closed debates and open debates. In other words, the networks in our sample vary in their “echo chamberness.” Based on our findings, we contend that variations in the echo chamberness of the various comment sections can be explained via the lens of conspiratorial (sub)cultures.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs7"><em>Poly‑truth, or the limits of pluralism: Popular debates on conspiracy theories in a post-truth era</em> <strong>Public Understanding of Science.</strong></a><em>with Jaron Harambam and Lars de Wildt. 2023</em>
+            <div id="abs7" class="pub-abs">Conspiracy theories are central to “post-truth” discussions. Official knowledge, backed by science, politics, and media, is distrusted by various people resorting to alternative (conspiratorial) explanations. While elite commentators lament the rise of such “untruths,” we know little of people’s everyday opinions on this topic, despite their societal ramifications. We therefore performed a qualitative content analysis of 522 comments under a Dutch newspaper article on conspiracy theories to study how ordinary people discuss post-truth matters. We found four main points of controversy: “habitus of distrust”; “who to involve in public debates”; “which ways of knowing to allow”; and “what is at stake?” The diverging opinions outline the limits of pluralism in a post-truth era, revealing tensions between technocratic and democratic ideals in society. We show that popular opinions on conspiracy theories embody more complexity and nuance than elite conceptions of post-truth allow for: they lay bare the multiple sociological dimensions of poly-truth.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs8"><em>Picturing opaque power. How conspiracy theorists construct oppositional videos on YouTube</em> <strong>Social Media + Society.</strong></a><em> with Jaron Harambam & Stef Aupers. 2022</em>
+            <div id="abs8" class="pub-abs">Conspiracy theories were once perceived as delusions of individuals on the fringes of society, but have become commonplace in mainstream culture. Today, they are produced, consumed, and circulated on various online media environments. From memes on 4chan, QAnon influencers on Instagram, to flat earth or antivaxx videos on YouTube, modern-day conspiracy culture embodies compelling mediated images and narratives that are composed of various audiovisual materials. Building on Stuart Hall’s encoding/decoding model, and Henry Jenkins’ notion of “participatory culture,” we analyze these audiovisual conspiracy theories as “oppositional readings” of hegemonic truths. More concretely, we analyze how conspiracy theorists reconstruct various audiovisual (mass-media) materials into streamlined narratives on YouTube videos to picture opaque power. Based on an in-depth qualitative analysis of 24 conspiracy theory videos, strategically selected from a larger sample of 200, we present three major categories of audiovisual narrative construction in conspiracy videos on YouTube: (1) Simulating: using fiction, religious and cultural images and narratives to render images of events otherwise invisible; (2) Deciphering: decoding hidden messages by “closely reading” images and looking for hidden symbolism; (3) Exhibiting: exposing information, research, and images that are “hidden in plain sight” but point to conspiracy. This article contributes to the growing body of literature on conspiracy theories by showing how they are not just texts, but should better be seen as media practices involving the recontextualizing of (mass)media material into new audiovisual conspiracy theory narratives. This shapes not just their content and form, but also their place in public discourse.</div>
+          </div>
+          <div class="pub-item">
+            <a href="#" class="pub-title" data-target="abs9"><em>Turn on, tune in, drop out? A typology of psychedelic microdosing as technologies of the self.</em> <strong>Journal of Cultural Analysis and Social Change.</strong></a><em> with Koen van Eijck. 2022.</em>
+            <div id="abs9" class="pub-abs">Psychedelic microdosing, or taking small doses of psychedelic substances that do not induce intoxication or altered states but rather subtle outcomes such as increased focus, has quickly become a mass media phenomenon. Many claim microdosing has become the new secret to enhancement in work contexts. Drawing from literature on psychedelic microdosing, technologies of the self, self-identity and the sociology of work and leisure, this study understands microdosing as a technology individuals introduce into their lives to modify themselves for various purposes. We explore the ways in which the 1960s iconic psychedelic drugs, that once offered turning on, tuning in and dropping out, are now finding new uses across different contexts. Taking a cultural-sociological perspective, we examine how individuals use microdoses of classic psychedelic drugs and how they make sense of microdosing in their daily lives. Based on our findings, we identify three different uses of psychedelic microdosing: (1) as technology of self-esteem and control at work, (2) as a self-help technology, and (3) as a technology of ‘slow living’.</div>
+          </div>
         </div>
 
         <div id="cv" class="card section">
           <h3>Academic Appointments</h3>
           <ul>
-            <li><em>2022-now</em>. Research Affiliate. The Center for Information, Technology, & Public Life (CITAP), UNC Chapel Hill. 
-            <li><em>2024-now</em>. Postdoctoral Fellow (FWO). KU Leuven (Belgium) — Media Culture &amp; Policy Lab &amp; & Yale University, Sociology.</li>
+            <li><em>2024-now</em>. Postdoctoral Fellow (FWO). KU Leuven (Belgium) — Media Culture &amp; Policy Lab &amp; Yale University, Sociology.</li>
+            <li><em>2022-now</em>. Research Affiliate. The Center for Information, Technology, &amp; Public Life (CITAP), UNC Chapel Hill.</li>
             <li><em>2024</em>. Postdoctoral Researcher (AHRC). KU Leuven (Belgium) — Media Culture &amp; Policy Lab.</li>
             <li><em>2020-2024</em>. PhD Candidate. KU Leuven (Belgium) — Media Culture &amp; Policy Lab.</li>
           </ul>
@@ -245,48 +216,39 @@
           </ul>
           <h3>Service</h3>
           <ul>
+            <li>Member of AoIR's "Risky Research" working group</li>
             <li>Member of the Editorial Board for a Forthcoming Sage journal Disinformation</li>
             <li>Reviewer for <em>Social Media + Society</em>, <em>New Media &amp; Society</em>, and other journals.</li>
             <li>Member, Diversity &amp; Sustainability committee, KU Leuven.</li>
           </ul>
-          <p class="note">Full CV available upon request.</p>
         </div>
 
         <div id="contact" class="card section">
-        
+          <h3>Get in touch</h3>
+          <p class="contact-line">Email (KU Leuven): <strong>kamile.grusauskaite<span class="monospace">[at]</span>kuleuven.be</strong></p>
+          <p class="contact-line">Email (Yale): <strong>kamile.grusauskaite<span class="monospace">[at]</span>yale.edu</strong></p>
         </div>
       </div>
     </div>
 
     <div class="footer monospace">
-      <div>© <span id="year"></span> Kamile Grusauskaite - Postdoctoral Fellow.</div>
+      <div>© <span id="year"></span> Dr. Kamile Grusauskaite - Postdoctoral Fellow.</div>
       <div style="margin-top:6px;">Single HTML file. No build step.</div>
     </div>
   </div>
 
   <script>
-    // Super-simple local hit counter (per-browser). Early-web vibes without external services
-    try {
-      var hits = parseInt(localStorage.getItem('kamile_hits') || '0', 10) + 1;
-      localStorage.setItem('kamile_hits', String(hits));
-      document.getElementById('hits').textContent = hits.toLocaleString();
-    } catch (e) {
-      document.getElementById('hits').textContent = '1';
-    }
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    // Toggle abstracts on title click
-    document.querySelectorAll('.pub-title').forEach(function(el){
-      el.addEventListener('click', function(e){
+    document.querySelectorAll('.pub-title').forEach(function(el) {
+      el.addEventListener('click', function(e) {
         e.preventDefault();
         var id = el.getAttribute('data-target');
-        var box = document.getElementById(id);
-        var isHidden = box.style.display === 'none';
-        box.style.display = isHidden ? 'block' : 'none';
-        box.setAttribute('aria-hidden', String(!isHidden));
+        var abs = document.getElementById(id);
+        var isHidden = abs.style.display === 'none' || abs.style.display === '';
+        abs.style.display = isHidden ? 'block' : 'none';
       });
     });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
